@@ -747,12 +747,26 @@
 /* Basic */
 
     	body {
-    		background-image: url("images/overlay.png"), url("images/bg.jpg");
+    		/*
+            background-image: url("images/overlay.png"), url("images/bg.jpg");
     		background-repeat: repeat, no-repeat;
     		background-size: auto, 100% 100%;
+    		*/      
     		font-family: 'Source Sans Pro', sans-serif;
-    		font-weight: 300;
-    		color: #777777;
+    		font-weight: 280;
+    		color: #5f5f5f;
+            background-image: -webkit-gradient(
+            	linear,
+            	left top,
+            	left top,
+            	color-stop(0.16, #12CEDF),
+            	color-stop(1, #0A7D85)
+            );
+            background-image: -o-linear-gradient(left top, #12CEDF 16%, #0A7D85 100%);
+            background-image: -moz-linear-gradient(left top, #12CEDF 16%, #0A7D85 100%);
+            background-image: -webkit-linear-gradient(left top, #12CEDF 16%, #0A7D85 100%);
+            background-image: -ms-linear-gradient(left top, #12CEDF 16%, #0A7D85 100%);
+            background-image: linear-gradient(to left top, #12CEDF 16%, #0A7D85 100%);
     	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1103,6 +1117,7 @@
 
 		#footer .copyright li {
 			display: inline-block;
+			color:#e4e4e4;
 		}
 
 		#footer .copyright li:before {
@@ -1167,14 +1182,14 @@
 			margin: 0.5em 0 0 0;
 		}
 		
-		article#me {
+		article.panel {
 		    margin :0;
             padding: 1.5em;
         }
-		#me h1 {
+		article h1 {
             margin-bottom: .7em;
         }
-        #me p {
+        article p {
             line-height : 1.2em;
         }
 

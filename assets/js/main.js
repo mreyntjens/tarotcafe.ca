@@ -50,7 +50,7 @@
 					$hbw = $('html,body,window'),
 					$footer = $('#footer'),
 					$wrapper = $('#wrapper'),
-					$nav = $('.mainnav'), $nav_links = $nav.find('a'),
+					$nav = $('.mainnav'), $nav_links = $nav.find('a').add('a.navlink'),
 					$jumplinks = $('.jumplink'),
 					$form = $('form'),
 					panels = [],

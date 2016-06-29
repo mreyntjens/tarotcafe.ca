@@ -1,6 +1,6 @@
 <?php
 if( isset($_POST['msg']) ) {
-	$to = "utilisetoncorps@gmail.com";
+	$to = "tarotcafemontreal@gmail.com";
 	
 	$subject = "Tarotcafe.ca :"  ; 
 	if( isset($_POST['subject']) ) { 

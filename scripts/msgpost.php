@@ -1,6 +1,6 @@
 <?php
 if( isset($_POST['msg']) ) {
-	$to = "tarotcafemontreal@gmail.com";
+	$to = "marienoelle@tarotcafe.ca";
 	
 	$subject = "Tarotcafe.ca :"  ; 
 	if( isset($_POST['subject']) ) { 
@@ -9,7 +9,7 @@ if( isset($_POST['msg']) ) {
 	
 	$message = 'Nom : ' . $_POST['name'] ;
 	$message .= ' / Courriel ou Tél. : ' . $_POST['coord'] . ' / Message : ' .  $_POST['msg'];
-	$from = "tarotcafemontreal@gmail.com";
+	$from = "marienoelle@tarotcafe.ca";
 	$headers = "From:" . $from;
 	
 	mail($to,$subject,$message,$headers);

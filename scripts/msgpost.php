@@ -9,7 +9,7 @@ if( isset($_POST['msg']) ) {
 	
 	$message = 'Nom : ' . $_POST['name'] ;
 	$message .= ' / Courriel ou Tél. : ' . $_POST['coord'] . ' / Message : ' .  $_POST['msg'];
-	$from = "mreyntjens@gmail.com";
+	$from = "marienoelle@tarotcafe.ca";
 	$headers = "From:" . $from;
 	
 	mail($to,$subject,$message,$headers);

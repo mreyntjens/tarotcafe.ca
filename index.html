@@ -1,16 +1,12 @@
 <!DOCTYPE HTML>
-<!--
-    Astral by HTML5 UP
-    html5up.net | @n33co
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
     <head>
-        <title>TAROT\CAFÉ</title>
+        <title>Guérison | Marie-Noelle | Montréal</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <meta name="author" content="Marie-Noëlle Reyntjens">        
-        <meta name="description" content="tarot médium clairvoyance guérison café montréal">
+        <meta name="description" content="guérison montréal">
         
         <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
@@ -33,199 +29,70 @@
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         
-        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-        
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript">
-        $(function(){ 
-            $("#contactsubmit").on('click',function(event) {
-                event.preventDefault(); 
-                
-                var $form = $( this ).closest('form');
-                                                        
-                $name = $form.find( 'input[name="name"]' );     
-                $coord = $form.find( 'input[name="coord"]' );      
-                $subject = $form.find( 'input[name="subject"]' );  
-                $msg = $form.find( 'textarea[name="msg"]' ); 
-                
-                if ($msg.val() == "" ) {
-                    return false;
+        <style>
+            html, body {
+                height: 100%;
+            }
+            body {
+                color:#f5f5f5;
+                font-family: 'Source Sans Pro', sans-serif;
+                background: #87e0fd; /* Old browsers */
+                background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+
+            }
+
+            h1 { 
+                font-size:40px;
+                margin:10px; 
+                font-weight: normal;
+            }
+            .main {
+                text-align:center;
+                margin:40px;
+            }
+            .mn {
+                font-size:20px;
+                margin:10px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            @media (min-width: 768px) {
+                h1 { 
+                    font-size:80px;
+                    margin:20px; 
+                    font-weight: normal;
                 }
-                
-                $('#contactsubmit').fadeOut();
-                $.post( "/scripts/msgpost.php",{name:$name.val(),coord:$coord.val(),subject:$subject.val(),msg:$msg.val()},function( data ) {
-                    
-                    $('#formmsg').html('Votre message a bien été envoyé. Merci !');  
-                    $name.val('');
-                    $coord.val('');
-                    $msg.val('');
-                    $subject.val('');
-                    setTimeout(function() { 
-                        $('#formmsg').html('');
-                        $('#contactsubmit').fadeIn();
-                    }, 3000);
-                });             
-            });     
-        }); 
-        </script>
+                .main {
+                    margin:40px;
+                    font-size:60px;
+                }
+                .mn {
+                    font-size:40px;
+                    margin:20px;
+                }
+                img {
+                    max-width:400px;
+                }
+            }
+
+        </style>
+
     </head>
     <body>
 
-        <!-- Wrapper-->
-        <div id="wrapper">
-
-            <!-- Nav -->
-            <nav id="nav" class="mainnav">
-                <a href="#me" class="icon fa-home active"><span>Accueil</span></a>     
-                <a href="#tarot" class="icon fa fa-eye"><span>Tarot</span></a>   
-                <a href="#guerison" class="icon fa fa-sign-language"><span>Guérison</span></a>
-                <a href="#contact" class="icon fa fa-envelope"><span>Contact</span></a>       
-            </nav>
-
-            <!-- Main -->
-            <div id="main">
-
-                <!-- Me -->
-                    <article id="me" class="panel">
-                        <section>
-                            <div class="row">
-                                <div class="8u 12u$(mobile)">
-                                    <h1>Tarot\Café</h1> 
-                                    <p>
-                                        <i>Tarot et guérison</i> 
-                                        <br><br>
-                                        Je suis à Montréal. Je voyage d'un café à l'autre dans Villeray. Cliquez sur <a class="navlink" href="#tarot">l'oeil</a> pour voir ma route.
-                                        <br><br>
-                                        65$ (1h)
-                                    </p>
-                                    <p>
-                                        Pour une guérison énergétique, cliquez sur les <a class="navlink" href="#guerison">mains</a>.
-                                    </p>
-                                </div>
-                                <div class="4u$ 12u$(mobile) mainnav">
-                                    <a href="#contact" class="image fit">
-                                        <img src="images/me2.jpg" alt="" />
-                                    </a>
-                                </div>
-                            </div>      
-                        </section>
-                    </article>
-
-                    <article id="tarot" class="panel" >
-                        <section>
-                            <div class="row"> 
-                                <div class="12u 12u$(mobile)">
-                                    <h1>Tarot</h1>      
-                                    <p>
-                                        <a class="navlink" href="#contact">Contactez-moi</a> pour un tirage de tarot à un de ces endroits.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="row" >
-                                <div class="6u 12u$(mobile)" style="padding-top:0px; ">  
-                                    <ul>
-                                        <li style="font-weight: 500;">LIGNE ORANGE</li>
-                                        <li style="line-height: 140%;margin-top:10px">*Proche du métro Jean-Talon :<br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Ferlucci+Caf%C3%A9+Boutique/@45.5395187,-73.6191877,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc919142cff9f1b:0x59043ddd5a781efb" >Ferlucci Café Boutique</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Caf%C3%A9+Larue+%26+fils/@45.537756,-73.6201932,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9191405cae271:0x8c4505ded4db7656">Larue et Fils de Castelnau</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Le+Berri+Caf%C3%A9/@45.5404257,-73.6220617,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc91916513091e5:0xd883d40207deb14b">Le Berri Café</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Starbucks/@45.5357262,-73.6187892,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91913a0d04add:0xfb9e0aaf7f1c490f!8m2!3d45.5357225!4d-73.6166005" >Starbucks Jean-Talon</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/La+brume+dans+mes+lunettes/@45.5351757,-73.6107797,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9196c6d02263d:0x2d4547c6a35ca488" >La brume dans mes lunettes</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Caf%C3%A9+Vincenzo/@45.5414612,-73.6245304,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91917928749b5:0x9334e48571f3153!8m2!3d45.5414575!4d-73.6223417" >Café Vincenzo</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/search/pain+dans+les+voiles/@45.5583516,-73.7303028,11z/data=!3m1!4b1" >Le Pain dans les Voiles</a>
-                                        </li>
-                                        <li style="line-height: 140%;margin-top:10px;">*Proche du métro Jarry :<br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Caf%C3%A9+Larue+%26+Fils+Jarry/@45.5428582,-73.6314533,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9191f4b0a2b5b:0x3f4f418db057018b" >Larue et Fils Jarry</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Caf%C3%A9+OUI+MAIS+NON/@45.5396862,-73.6328668,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9191952bad201:0xacb10890d3316493">Café OUI MAIS NON</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Pinocchio+Caf%C3%A8/@45.5425238,-73.6279828,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9191862161fe9:0x41d1e48e1b1b1861">Café Pinocchio</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Cafe+Vito/@45.5384334,-73.6267638,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc91913443df817:0x3f1a0dcfdd21b096">Café Vito</a><br>
-                                        </li> 
-                                    </ul>   
-                                </div>
-                                <div class="6u 12u$(mobile)" style="padding-top:0px;">
-                                    <ul>
-                                        <li style="font-weight: 500;">LIGNE BLEUE</li>
-                                        <li style="line-height: 140%;margin-top:10px;">*Proche du métro De Castelnau :<br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Caffe+San+Simeon/@45.5332424,-73.6157709,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9196d38c23d27:0x38aabbe7d7875f76" >Caffe San Simeon</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Le+Pressing+Caf%C3%A9/@45.5357227,-73.6221057,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc919117d76c381:0xf5d1aae2597f5d5b">Le Pressing Café</a><br>
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Cafe+Vito/@45.5384334,-73.6267638,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc91913443df817:0x3f1a0dcfdd21b096">Café Vito</a><br>     
-                                            <a target="_blank" href="https://www.google.ca/maps/place/Caf%C3%A9+Larue+%26+fils/@45.537756,-73.6201932,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc9191405cae271:0x8c4505ded4db7656">Larue et Fils de Castelnau</a><br>
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                    </article>
-                    
-                    <article id="guerison" class="panel" >
-                        <section>
-                            <div class="row"> 
-                                <div class="12u 12u$(mobile)">
-                                    <h1>Guérison</h1>      
-                                    <p> 
-                                        Je procure mes traitements dans un centre de bien-être à Villeray, proche du métro Jean-Talon. 
-                                        <br><br>
-                                        Tarif: 75$ (1h) 
-                                        <br><br>
-                                        <a class="navlink" href="#contact">Contactez-moi</a> pour un rendez-vous. 
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </article>  
-                    
-                    <article id="contact" class="panel">
-                        <header>
-                            <h2>Contactez-moi</h2>
-                        </header>
-                        <form id="contactform" action="#" method="post">
-                            <div>
-                                <div class="row">
-                                    <div class="6u 12u$(mobile)">
-                                        <input type="text" name="name" placeholder="Nom" />
-                                    </div>
-                                    <div class="6u$ 12u$(mobile)">
-                                        <input type="text" name="coord" placeholder="Courriel ou Tél." />
-                                    </div>
-                                    <div class="12u$">
-                                        <input type="text" name="subject" placeholder="Sujet" />
-                                    </div>
-                                    <div class="12u$">
-                                        <textarea name="msg" placeholder="Message" rows="6"></textarea>
-                                    </div>
-                                    <div class="12u$">
-                                        <input id="contactsubmit" type="submit" value="Envoyer" />
-                                    </div>   
-                                    <div class="12u$">
-                                        <label id="formmsg"></label>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </form>
-                    </article>
+        <!-- Main -->
+        <div class="main">
+            <h1>Guérison</h1>
+            <div class="mn">
+                Marie-Noelle <br> 514 886 5210
             </div>
-
-            <!-- Footer -->
-            <div id="footer">
-                <ul class="copyright">
-                    <li>Marie-Noëlle Reyntjens</li><li>514 886-5210</li>
-                </ul>
-            </div>    
-
+            <img src="images/me2.jpg" alt="" />
         </div>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/skel.min.js"></script>
-        <script src="assets/js/skel-viewport.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-        <script src="assets/js/main.js"></script>
 
     </body>
 </html>
